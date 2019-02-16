@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <!-- Here come dat boi -->
+    <p id="chungusp">Loading chungus...</p>
+    <canvas id="chungus" width="1000" height="1000">
+    </canvas>
+  </body>
+  
+  <script>
+    var img = new Image();
+    img.src = "/static/img/chungus.svg";
+
+    setTimeout(function() {
+    var elem = document.getElementById("chungus");
+    const ctx = elem.getContext('2d')
+    ctx.drawImage(img, 0, 0, 1000, 1000);
+
+    document.getElementById("chungusp").remove();
+    }, 50);
+    
+  </script>
+</html>
